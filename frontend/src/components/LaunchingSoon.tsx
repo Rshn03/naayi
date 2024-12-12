@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Mail } from 'lucide-react';
+import { FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export const LaunchingSoon = () => {
@@ -90,7 +90,7 @@ export const LaunchingSoon = () => {
               {loading ? (
                 <span className="loader w-4 h-4 border-2 border-t-transparent rounded-full animate-spin" />
               ) : (
-                <Mail className="w-5 h-5" />
+                <FaEnvelope className="w-5 h-5" />
               )}
               {loading ? 'Processing...' : 'Notify Me'}
             </motion.button>

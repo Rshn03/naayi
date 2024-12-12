@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin } from 'lucide-react';
-
+import { FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 export const Footer = () => {
   return (
     <motion.footer
@@ -15,8 +14,9 @@ export const Footer = () => {
             <h3 className="text-xl font-semibold mb-2">Connect With Us</h3>
             <div className="flex gap-4">
               {[
-                { Icon: Instagram, label: 'Instagram', url: 'https://www.instagram.com/naayi_official/' },
-                { Icon: Linkedin, label: 'Linkedin', url: 'https://www.linkedin.com/company/naayi-com/' },
+                { Icon: FaInstagram, label: 'Instagram', url: 'https://www.instagram.com/naayi_official/' },
+                { Icon: FaLinkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/company/naayi-com/' },
+                { Icon: FaTwitter, label: 'LinkedIn', url: 'https://www.x.com/naayi_officials/' },
               ].map(({ Icon, label, url }, index) => (
                 <motion.a
                   key={label}
