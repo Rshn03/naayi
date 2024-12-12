@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import logo from '../assets/naayi-logo.png'; 
 
 export const Header = () => {
   return (
@@ -6,7 +7,7 @@ export const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
-      className="w-full py-6 px-4 bg-[#1a4c45]/90 backdrop-blur-sm fixed top-0 z-50"
+      className="w-full py-4 px-4 bg-[#1a4c45]/90 backdrop-blur-sm fixed top-0 z-50"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo Section */}
@@ -16,7 +17,11 @@ export const Header = () => {
           transition={{ delay: 0.5 }}
           className="flex items-center gap-2"
         >
-          <span className="text-2xl font-bold text-white">Naayi</span>
+          <img
+            src={logo}
+            alt="Naayi Logo"
+            className="h-16 max-h-16 object-contain" // Adjust size as needed
+          />
         </motion.div>
 
         {/* Navigation Section */}
