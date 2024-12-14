@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import logo from '../assets/naayi-logo.png'; 
+import logo from '../assets/naayi-logo.png';
 
 export const Header = () => {
   return (
@@ -24,27 +24,34 @@ export const Header = () => {
           />
         </motion.div>
 
-        {/* Navigation Section */}
-        <nav>
-          <ul className="flex gap-6">
-            {['About', 'Services', 'Contact'].map((item, index) => (
-              <motion.li
-                key={item}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 + index * 0.1 }}
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="text-white hover:text-gray-200 transition-colors"
-                >
-                  {item}
-                </motion.button>
-              </motion.li>
-            ))}
-          </ul>
-        </nav>
+        {/* Cards for Naayi (Business Owners) and Users */}
+        <div className="flex gap-4 ml-auto">
+          {/* Card for Naayi (Business Owners) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5 }}
+            className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl cursor-pointer w-36"
+          >
+            <h3 className="text-lg font-semibold mb-2 text-center">For Naayi (Business Owners)</h3>
+            <p className="text-gray-600 text-center text-sm">
+              Manage services and appointments.
+            </p>
+          </motion.div>
+
+          {/* Card for Users */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.7 }}
+            className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl cursor-pointer w-36"
+          >
+            <h3 className="text-lg font-semibold mb-2 text-center">For Users</h3>
+            <p className="text-gray-600 text-center text-sm">
+              Book appointments and explore salons.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </motion.header>
   );
